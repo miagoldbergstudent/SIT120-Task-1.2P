@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <h1>JavaScript Methods</h1>
+    
+    <h2>String Methods</h2>
+
+    <h3>String Length</h3>
+
+        <p>This is a sample sentence that's length will be counted</p>
+        <p>The length of characters in the sample sentence is:</p>
+        <p id="textId1"></p>
+        <script>
+            let textLength = "This is a sample sentence that's length will be counted";
+            document.getElementById("textId1").innerHTML = textLength.length;
+        </script>
+
+    <h3>Slice in String</h3>
+
+        <p>Summer, Autumn, Winter, Spring"</p>
+        <p>The sliced part of the string is:</p>
+        <p id="textId2"></p>
+        <script>
+            let textSlice = "Summer, Autumn, Winter, Spring";
+            let part = textSlice.slice(8,14);
+            document.getElementById("textId2").innerHTML = part; 
+        </script>
+
+    <h3>Replace in String</h3>
+
+        <p>Button replaces 'Rainy' with 'Sunny' in the following sentence</p>
+
+        <button onclick="textReplace()">Press Here</button>
+
+        <p id="textId3">It is Sunny today</p>
+
+        <script>
+        function textReplace() 
+        {
+        let textReplace = document.getElementById("textId3").innerHTML;
+        document.getElementById("textId3").innerHTML =
+        textReplace.replace("Sunny","Rainy");
+        }
+        </script>
+
+    <h3>Replace All in String</h3>
+        <p id="textId4"></p>
+
+        <script>
+            let textReplaceAll = "I like chocolate, chocolate is a good flavour"
+            textReplaceAll = textReplaceAll.replaceAll("chocolate","strawberry");
+            
+            document.getElementById("textId4").innerHTML = textReplaceAll;
+        </script>
+
+    <h3>Convert String to Lowercase</h3>
+        <p>Button turns sentence lowercase</p>
+        <button onclick="myFunction()">Press Here</button>
+
+        <p id="textId5">My Name is Mia</p>
+        
+        <script>
+        function myFunction() 
+        {
+        let text = document.getElementById("textId5").innerHTML;
+        document.getElementById("textId5").innerHTML =
+        text.toLowerCase();
+        }
+        </script>
+
+    <h2>Number Methods</h2>
+
+    <h3>Printing a Number with decimals</h3>
+
+        <p id="numberId1"></p>
+            <script>
+                let x = 26.4
+                document.getElementById("numberId1").innerHTML = x
+            </script>
+
+
+    <h3>Scientific Notation</h3>
+        <p id="numberId2"></p>
+        <script>
+            let y = 123e5;
+            document.getElementById("numberId2").innerHTML = y
+        </script>
+
+    <h3>Number Rounding</h3>
+        <p>The first number will be rounded to the second</p>
+        <p id="numberId3"></p>
+    
+        <script>
+            let a = 999999999999999;
+            let b = 9999999999999999;
+            document.getElementById("numberId3").innerHTML = a + "<br>" + b;
+        </script>
+
+    <h3>Addition</h3>
+        <p id="numberId4"></p>
+        <script>
+            let d = 37;
+            let e = 54;
+            let f = d + e;
+            document.getElementById("numberId4").innerHTML = f;
+        </script>
+
+    <h3>Hexadecimal Numbers</h3>
+        <p id="numberId5"></p>
+        <script>
+            let g = 0xFF;
+            document.getElementById("numberId5").innerHTML = "0xFF = " + g;
+        </script>
+    
+    <h2>Array Methods</h2>
+
+    <h3>Array Length Property</h3>
+        <p id="arrayId1"></p>
+        <p id="arrayId2"></p>
+        <script>
+            const colours = ["Red", "Orange", "Yellow", "Green"];
+            document.getElementById("arrayId1").innerHTML = colours;
+            colours[colours.length] = "Blue";
+            document.getElementById("arrayId2").innerHTML = colours;
+        </script>
+
+    <h3>To String</h3>
+        <p id="arrayId3"></p>
+        <script>
+            const shapes = ["Square", "Rectangle", "Triangle", "Circle"];
+            document.getElementById("arrayId3").innerHTML = colours.toString();
+        </script>
+
+    <h3>Pop</h3>
+        <p id="arrayId4"></p>
+        <p id="arrayId5"></p>
+        <script>
+            const numbers = [23, 27, 21,];
+            document.getElementById("arrayId4").innerHTML = numbers;
+            numbers.pop();
+            document.getElementById("arrayId5").innerHTML = numbers;
+        </script>
+
+    <h3>Push</h3>
+        <p id="arrayId6"></p>
+        <p id="arrayId7"></p>
+        <script>
+            const values = [2, 4, 6,];
+            document.getElementById("arrayId6").innerHTML = values;
+            values.push(8);
+            document.getElementById("arrayId7").innerHTML = values;
+        </script>
+
+    <h3>Merge</h3>
+        <p id="arrayId8"></p>
+
+        <script>
+            const setOne = [98, 6, 11];
+            const setTwo = ["Marlene", "Sarah", "Lucas"];
+            const allSets = setOne.concat(setTwo);
+            document.getElementById("arrayId8").innerHTML = allSets;
+        </script>
+
+    <h2>Date Methods</h2>
+    
+    <h3>Creating a New Date</h3>
+        <p id="dateId1"></p>
+        <script>
+            const h = new Date();
+            document.getElementById("dateId1").innerHTML = h;
+        </script>
+
+    <h3>Six Number Specification</h3>
+        <p id="dateId2"></p>
+
+        <script>
+            const i = new Date(2023, 6, 8, 11, 2, 26);
+            document.getElementById("dateId2").innerHTML = i;
+        </script>
+
+    <h3>Two Digit Years</h3>
+    <p id="dateId3"></p>
+
+    <script>
+    const j = new Date(97, 3, 12);
+    document.getElementById("dateId3").innerHTML = j;
+    </script>
+
+    <h3>Creating a Date in Milliseconds</h3>
+
+        <p id="dateId4"></p>
+        <script>
+            const k = new Date(100000000000);
+            document.getElementById("dateId4").innerHTML = k;
+        </script>
+
+    <h3>Four Number Specification</h3>
+        <p id="dateId5"></p>
+
+        <script>
+            const l = new Date(2017, 8, 23, 7,);
+            document.getElementById("dateId5").innerHTML = l;
+        </script>
+
+    <h2>Function Methods</h2>
+
+    <h3>Multiplication Function</h3>
+        <p id="functionId1"></p>
+
+        <script>
+            function multiply(p1, p2) {
+            return p1 * p2;
+            }
+
+            let result = multiply(12, 4);
+            document.getElementById("functionId1").innerHTML = result;
+        </script>
+
+        <h3>AUD to USD Conversion</h3>
+        <p id="functionId2"></p>
+
+        <script>
+            function toUSD(m) {
+            return (m) * 0.78
+            }
+            
+            let value = toUSD(36);
+            document.getElementById("functionId2").innerHTML = value;
+        </script>
+</body>
+
+</html>

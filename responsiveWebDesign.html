@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design</title>
+<meta name="wiewport" content="width=device-width, intial-scale=1.0">
+
+<style>
+    .entirePage
+    {
+        display:flex;
+        justify-content:space-evenly;
+    }
+h1
+    {
+        font-family: monospace, light;
+    }
+h2
+    {
+        font-family: monospace, light;
+    }
+h3
+    {
+        font-family: monospace, light;
+    }
+
+*
+{
+  box-sizing: border-box;
+}
+
+    .rightPage
+    {
+    background-color: #e3d4f5;
+    padding: 18px;
+    float: left;
+    width: 40%;
+    }
+    
+    .mainPage 
+    {
+    background-color: #d6f5e9;
+    padding: 18px;
+    float: left;
+    width: 60%;
+    }
+
+
+
+</style>
+</head>
+
+<body>
+    <div class ="entirePage">
+        
+        <div class="mainPage">
+
+            <h1>Responsive Web Design</h1>
+            <p>Responsive web design is the use and implementation of adjustments, tags and web settings that allow a site to make the necessary changes to be useable, viewable, and successfully present itself on a variety of devices such as desktops, phones and tablets.
+                This must take into consideration the screen width and length, the devices ability to load videos and other graphics, the browser in use and occasionally the bandwidth of the device. Previous to responsive web design, most sites were built to only run on desktops and were coded to fit certain browser systems too, making them difficult and almost unusable on a variety of devices. 
+                With the rapid development of mobile devices and the convivence they come with, there was a need for business, information, shops and other kind of topics that are hosted on websites to have a way of being viewed from there.
+                These obstacles are prevented and resolved through the use of viewport meta tags, tags that allow responsive media by having a max width, text scaling and instant adjustments to the layout of the media, tables, links and other text within the site based on its needs.
+            <br>
+            </div>
+
+        <div class="rightPage">
+            <p>This picture will change to a different landscape depending on browser size, city for small and field for large. This is not what the function of this method would actually look like, only an example of how it works.</p>
+            <br>
+            <picture>
+                <source srcset="city.jpg" media="(max-width: 1000px)">
+                <img src="flowerField.webp" alt="Landscape" style="width:90%;">
+                
+            </picture>
+            </div>
+
+    </div>
+</body>
+
+</html>
